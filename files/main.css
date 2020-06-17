@@ -970,6 +970,9 @@ label.invalidInput {color: #E80636;font-size: 90%;}
 .cartTable .buttons .button i {margin-right: 10px;font-size: 21px;}
 .cartTable .inputText {text-align: center;padding: 0px;max-width: 80px;border-color: #dfe4eb;}
 .cartTable .inputText:disabled {background-color: #ececec;cursor: not-allowed;}
+.cartTable .qty-wrap a {vertical-align: middle;}
+.cartTable .qty-wrap {width: 150px;margin: 0 auto;}
+.cartTable .closetd {max-width: 50px;}
 
 /*** Личный кабинет (Страницы) ***/
 .col-account {margin: 0;padding-bottom: 30px;}
@@ -1230,6 +1233,33 @@ label.invalidInput {color: #E80636;font-size: 90%;}
 .block-left .block.catalog .filters .collapsible:last-child .title {border-bottom: 1px solid #dfe4eb;}
 .block-left .block.catalog .filters .collapsible .title {border-bottom: 0;border-top: 1px solid #dfe4eb;}
 .block .collapsible .content {border-bottom: 0;border-top: 1px solid #dfe4eb;}
+.cartTable .cart-price.hide {display: none;}
+.cartTable thead {display: none;}
+.cartTable td.hide {display: none;}
+.cartTable tbody tr td, .cartTable thead tr td {border-bottom: 0;padding: 0;}
+.cartTable tbody tr {display: block;position: relative;width: 100%;margin-bottom: 20px;border-bottom: 1px solid #dfe4eb;}
+.cartTable tbody tr:last-child {margin: 0;}
+.cartTable tbody tr > td {display: inline-block;}
+.cartTable tbody tr .cart-name {display: block;text-align: center;margin-bottom: 0px;}
+.cartTable tbody tr td.image {display: block;text-align: center;border-right: 1px solid #dfe4eb;}
+.cartTable tbody tr td.image img {margin: 10px;}
+.cartTable tbody tr td.name {display: block;border-top: 0;border-left: 1px solid #dfe4eb;padding: 10px;}
+.cartTable tbody tr td.name a {margin-bottom: 0px;}
+.cartTable tbody tr td.name div {display: none;}
+.cartTable tbody tr td.cart-price {display: block;position: relative;width: 100%;line-height: 38px;text-align: center;}
+.cartTable tbody tr td.closetd {position: absolute;right: 0;bottom: 0;line-height: 38px;padding: 0 10px;}
+.cartTable tbody tr td.closetd .remove {vertical-align: middle;}
+.cartTable tbody tr td.cart-qty {position: absolute;left: 0;z-index: 1;border-bottom: 1px solid #dfe4eb;}
+.cartTable tbody tr td.cart-qty .inputText {border: 0;background-color: transparent;height: 38px;max-width: 50px;}
+.cartTable .qty-wrap {width: 110px;}
+.cartTable tfoot tr {display: block;float: left;width: 100%;border-bottom: 1px solid #dfe4eb;}
+.cartTable tfoot tr > td {float: left;}
+.cartTable tfoot tr > td:last-child {float: right;}
+.cartTable tfoot tr.actions {border-bottom: 0;}
+.cartTable tfoot tr.actions td {display: block;width: 100%;}
+.cartTable tfoot tr.discounttr td, .cartTable tfoot tr.total td {border-bottom: 0;}
+.formfast-cart {display: none !important;}
+#OrderAjaxBlock .formfast #closeOrder {display: inline-block;}
 }
 
 @media all and (max-width: 767px) {
@@ -1249,32 +1279,6 @@ label.invalidInput {color: #E80636;font-size: 90%;}
 .goodsDataOpinionFormReset {width: 80px;}
 .step li {display: block;width: 100%;padding: 15px;}
 .step li.step_done {border-bottom: 1px solid rgba(255, 255, 255, 0.2);}
-.cartTable thead {display: none;}
-.cartTable td.hide {display: none;}
-.cartTable tbody tr td, .cartTable thead tr td {border-bottom: 0;padding: 0;}
-.cartTable tbody tr {display: block;position: relative;width: 100%;margin-bottom: 20px;border-bottom: 1px solid #dfe4eb;}
-.cartTable tbody tr:last-child {margin: 0;}
-.cartTable tbody tr > td {display: inline-block;}
-.cartTable tbody tr .cart-name {display: block;text-align: center;margin-bottom: 0px;}
-.cartTable tbody tr td.image {display: block;text-align: center;border-right: 1px solid #dfe4eb;}
-.cartTable tbody tr td.image img {margin: 10px;}
-.cartTable tbody tr td.name {display: block;border-top: 0;border-left: 1px solid #dfe4eb;padding: 10px;}
-.cartTable tbody tr td.name a {margin-bottom: 0px;}
-.cartTable tbody tr td.name div {display: none;}
-.cartTable tbody tr td.cart-price.hide {display: none;}
-.cartTable tbody tr td.cart-price {display: block;position: relative;width: 100%;line-height: 38px;text-align: center;}
-.cartTable tbody tr td.closetd {position: absolute;right: 0;bottom: 0;line-height: 38px;padding: 0 10px;}
-.cartTable tbody tr td.closetd .remove {vertical-align: middle;}
-.cartTable tbody tr td.cart-qty {position: absolute;left: 0;z-index: 1;border-bottom: 1px solid #dfe4eb;}
-.cartTable tbody tr td.cart-qty .inputText {border: 0;background-color: transparent;height: 38px;max-width: 70px;}
-.cartTable tfoot tr {display: block;float: left;width: 100%;border-bottom: 1px solid #dfe4eb;}
-.cartTable tfoot tr > td {float: left;}
-.cartTable tfoot tr > td:last-child {float: right;}
-.cartTable tfoot tr.actions {border-bottom: 0;}
-.cartTable tfoot tr.actions td {display: block;width: 100%;}
-.cartTable tfoot tr.discounttr td, .cartTable tfoot tr.total td {border-bottom: 0;}
-.formfast-cart {display: none !important;}
-#OrderAjaxBlock .formfast #closeOrder {display: inline-block;}
 .thumblist {max-width: 500px;}
 .sort-by label, .show-by label {display: none;}
 /* Товары таблицей */
@@ -1345,6 +1349,8 @@ label.invalidInput {color: #E80636;font-size: 90%;}
 .cartTable tfoot tr.discounttr td.disc-name {max-width: 160px;}
 .cartTable tfoot tr.actions .buttons .button {display: block;width: 100%;}
 .cartTable tfoot tr.actions .buttons .button:first-child {margin-bottom: 10px;}
+.cartTable tbody tr td.cart-qty {position: relative;width: 100%;border-bottom: 0;}
+.cartTable .qty-wrap {width: 100%;}
 .formfast .form-list .fields.small.first {margin-right: 0px;}
 .thumblist {max-width: 220px;}
 .show-by label {display: none;}
