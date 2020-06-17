@@ -1812,12 +1812,10 @@ function quantity() {
     var
       quantity = $(this).parent().find('.quantity, .cartqty'),
       currentVal = parseInt(quantity.val());
-    console.log(quantity)
-    console.log(currentVal)
     if (!isNaN(currentVal)){
       quantity.val(currentVal + 1);
       quantity.trigger('keyup');
-      quantity.trigger("change");
+      quantity.trigger('change');
     }
     return false;
   });
@@ -1826,17 +1824,15 @@ function quantity() {
     var
       quantity = $(this).parent().find('.quantity, .cartqty'),
       currentVal = parseInt(quantity.val());
-    console.log(quantity)
-    console.log(currentVal)
     if (!isNaN(currentVal)){
       quantity.val(currentVal - 1);
       quantity.trigger('keyup');
-      quantity.trigger("change");
+      quantity.trigger('change');
     }
     return false;
   });
   // Если вводят 0 то заменяем на 1
-  $('.qty-wrap .quantity').off('change').change(function(){
+  $('.qty .quantity, .cartqty').change(function(){
     if($(this).val() < 1){
       $(this).val(1);
     }
