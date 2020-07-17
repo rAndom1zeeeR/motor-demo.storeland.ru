@@ -773,9 +773,6 @@ $(document).ready(function(){
         // Идентификатор товарной модификации
         goodsModificationId.val(modificationId);
         priceDiff();
-
-        // Идентификатор товарной модификации
-        goodsModificationId.val(modificationId);
         // Меняет главное изображение товара на изображение с идентификатором goods_mod_image_id
         function changePrimaryGoodsImage(goods_mod_image_id) {
           // Если не указан идентификатор модификации товара, значит ничего менять не нужно.
